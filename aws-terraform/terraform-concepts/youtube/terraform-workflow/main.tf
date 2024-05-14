@@ -9,15 +9,15 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region = "us-east-2"
 }
 
 resource "aws_instance" "example" {
-  ami                    = "ami-0c7217cdde317cfec"
+  ami                    = "ami-09040d770ffe2224f"
   instance_type          = "t2.micro"
-  key_name               = "terraform-aws"
-  vpc_security_group_ids = ["sg-0c51540c60857b7ed", "sg-0c51540c60857b7ed"]
-  subnet_id              = "subnet-096d45c28d9fb4c14"
+  key_name               = "ansible-key"
+  vpc_security_group_ids = ["sg-0c3533ef29dec291d", "sg-06e6f7b94a896c483"]
+  subnet_id              = "subnet-000d5ee9d01bddbb2"
   root_block_device {
     volume_size = "10"
   }
